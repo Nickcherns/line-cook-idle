@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from "react"
+import cookList from './cookList'
 
 
 
 function App({cookList}) {
 
-use 
+ 
 let [money, setMoney] = useState(1);
 let [clcOwned, setClcOwned] = useState(0);
 
@@ -28,15 +29,14 @@ let cookPress = function() {
   console.log(money);
 }
 
+
+
+
   return (
     <div className="App">
       {/* Crafting Menu */}
       <div className='craft'>
-        <div>
-          <h4>Crummy Line Cook</h4>
-          <h5>Owned: {clcOwned}</h5>
-          <button onClick={clcBuy}>Buy 1</button>
-        </div>
+        <lineCooks/>
       </div>
       {/* Click Area */}
       <div className='clickArea'>
