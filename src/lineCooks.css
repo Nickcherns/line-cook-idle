@@ -1,0 +1,10 @@
+.cook1 {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 50px;
+    flex-direction: column;
+    
+    font-weight: 700;
+  }
