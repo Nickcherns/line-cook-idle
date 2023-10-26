@@ -6,36 +6,43 @@ import './lineCooks.css'
 
 
 function App() {
-  
+
+// variables
 let [money, setMoney] = useState(1);
-let [intervalId, setIntervalId] = useState(null);
+let [intervalID, setIntervalID] = useState(null);
 
+// 
 useEffect(() => {
-  if(intervalId) {
-    return () => clearInterval(intervalId);
+  if(intervalID) {
+    return () => clearInterval(intervalID);
   }
-}, [intervalId])
+}, [intervalID])
 
+
+// cook point button function
 let cookPress = function() {
   setMoney(money+1);
   console.log(money);
 }
 
+// buy cook function
 function buyPress(increaseAmt) {
-  if(!intervalId) {
+  if(!intervalID) {
     let id = setInterval(() => {
       setMoney((money) => money + increaseAmt);
     }, 1000);
-    setIntervalId(id);
+    setIntervalID(id);
   }
 }
 
+// Clear idle point increase
 function clearPress() {
   setMoney(0);
-  clearInterval(intervalId);
-  setIntervalId(null);
+  clearInterval(intervalID);
+  setIntervalID(null);
 }
 
+// MAIN PAGE
   return (
     <div className="App">
       {/* Crafting Menu */}
